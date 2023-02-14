@@ -1,0 +1,74 @@
+/*글씨체*/
+@font-face {
+  font-family: 'dalmoori';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/dalmoori.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 반응형 */
+@media (max-width: 768px) {
+  div { text-align: center;
+  }
+  .introContainer {
+    
+  }
+}
+
+@media (min-width: 769px) {
+}
+  div { text-align: center;
+}
+/*배경이미지*/
+.introContainer {
+  background-image: url(../img04.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 500px;
+} 
+/*제목*/
+.introTitle {
+  padding-top: 150px;
+  font-family: "dalmoori";
+  font-size: 40px;
+  line-height: 50px;
+  color: white;
+  line-height: 70px;
+}
+/*이미지*/
+svg {
+  height: 100%;
+  width: 300px;
+}
+
+.introButton {
+  height: 200px;
+  width: 350px;
+  display: inline-block;
+  text-align: center;
+} 
+
+/*시작링크*/
+.introStart {
+  font-family: "dalmoori";
+  font-size: 30px;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  display: block;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  text-decoration-line: none; /*link 밑줄 없애줌*/
+} 
+/*참여자수*/
+.introCount {
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  display: block;
+  padding: 20px;
+  text-align: center;
+  text-decoration-line: none; /*link 밑줄 없애줌*/
+  margin-top: 10px;
+} 

@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// HashRouter는 git에 배포가 쉬워서 씀. 브라우저 라우터로 교체 의향 있음.
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Intro from "./routes/Intro";
+import Test from "./routes/Test";
+import Result from "./routes/Result";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* 루트주소=/intro */}
+        <Route path="/" element={<Intro />} />
+        <Route path="/test" element={<Test />} />
+        <Route path="/result/:mbti" element={<Result />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
