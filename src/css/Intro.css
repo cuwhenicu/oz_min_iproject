@@ -1,27 +1,23 @@
 /*글씨체*/
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+
 @font-face {
-  font-family: 'dalmoori';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/dalmoori.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Galmuri9';
+    src: url('../Galmuri9.ttf') format('truetype');
 }
-@font-face {
-  font-family: 'NeoDunggeunmo';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 /*배경이미지*/
 .introContainer {
   background-image: url(../../public/img/background.jpg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
   width: 500px;
 
   color: white;
+  font-family: 'Galmuri9';
   text-align: center;
   align-items: center;
   display: flex;
@@ -33,8 +29,7 @@
 .introTitle {
   height: 30%;
   width: 80vw;
-  font-family: "dalmoori";
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: white;
   text-shadow: -1px 0 pink, 0 1px pink, 1px 0 pink, 0 -1px pink;
   display: flex;
@@ -78,13 +73,12 @@
 
 .introButton {
   text-align: center;
-  width: 70%;
-  height: 15%;
+  width: 50%;
+  height: 25%;
   margin: 0px 10px;
-
+  font-family: 'Galmuri9';
   font-size: 1.5rem;
   font-weight: bold;
-  font-family: 'NeoDunggeunmo';
 
 
   color:  rgb(13, 7, 38);
@@ -98,7 +92,7 @@
 
 .introButton:hover{
   background-color: 	#C8FAC8	;
-  border: 0;
+  border: 3px solid #C8FAC8;
   box-shadow: 0 0 15px #C8FAC8	;
 }
 
@@ -107,7 +101,6 @@
   width: 80%;
   height: 10%;
 
-  font-family: 'NeoDunggeunmo';
   font-weight: lighter;
 
   /* display: flex;

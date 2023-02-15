@@ -40,14 +40,6 @@ export const ModalView = styled.div.attrs((props) => ({
   height: 10%;
   border-radius: 1rem;
   background-color: white;
-  // > .close-btn {
-  //   // X 버튼을 화면 정중앙으로 정렬
-  //   position: absolute;
-
-  //   // 중앙에서 위로 10px 이동
-  //   // top: 10px;
-  //   cursor: pointer;
-  //   color: black;
   }
 `;
 
@@ -87,10 +79,9 @@ const URLShareButton = styled.button`
   cursor: pointer;
   background-color: black;
   &:hover {
-    background-color: #a99fee;
+  background-color: #a99fee;
   }
 `;
-
 
 
 const Result = () => {
@@ -98,6 +89,10 @@ const Result = () => {
   const { mbti } = params;
 
   const navigate = useNavigate();
+
+  function goMbtis(){
+    navigate('/mbtis')
+  }
 
   function goIntro(){
     navigate('/')
@@ -138,11 +133,11 @@ const Result = () => {
       <Mbti data={mbtiData[mbti]}/>
       <div className="resultButtonContainer"> 
         <div className="resultButtons">
-          <button className="resultButton">전체 유형 보기</button>
+          <button className="resultButton" onClick={goMbtis}>나와 맞는 유형 보기</button>
+
           <ModalBtn className="resultButton" onClick={openModalHandler}>
             {isOpen ? "Opened!" : "공유하기"}
           </ModalBtn>
-
           {isOpen ? ( // 모달 배경화면을 누르면 setIsOpen(!isOpen)가 된다.
             <ModalBackdrop onClick={openModalHandler}>
               <ModalView>
@@ -168,14 +163,15 @@ const Result = () => {
             href="https://faint-bar-25e.notion.site/Team-a1d6b19d09904d40a01fc2a4a49206fa"
             target="_blank"
           >
-            <button className="resultButton">팀 소개 페이지</button>
+            <button className="resultButton">개발팀 소개</button>
           </a>
           <a href="https://ozcodingschool.com/" target='_blank'>
-            <button className="resultButton">오즈 코딩  바로가기</button>
+            <button className="resultButton">개발 배우러 가기</button>
           </a>
         </div>
+
         <div className="resultButtons">
-          <button className = "resultButton" onClick={goIntro}>다시하기</button>
+          <button className = "retryButton" onClick={goIntro}>다시하기</button>
         </div>
       </div>
     </div>

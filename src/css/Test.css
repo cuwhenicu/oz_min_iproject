@@ -1,20 +1,19 @@
+/*글씨체*/
 @import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
 
 @font-face {
-    font-family: 'NeoDunggeunmo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Galmuri9';
+    src: url('../Galmuri9.ttf') format('truetype');
 }
 
-        
+/*배경이미지*/
 .test-container {
     background-image: url(../../public/img/background.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
-    /* width: 500px; */
+    width: 500px;
 
     text-align: center;
     align-items: center;
@@ -24,7 +23,7 @@
 }
 
 .progressBar{
-    height: 30%;
+    height: 20%;
     width: 70%;
 
     display: flex;
@@ -34,12 +33,13 @@
 }
 
 .test-sub-cont{
-    height: 30%;
+    height: 40%;
     width: 90%;
 
-    font-size: 2.5rem;
-    font-family: 'NeoDunggeunmo';
+    font-size: 2rem;
+    font-family: 'Galmuri9';
     color: pink;
+    
 
     display: flex;
     flex-direction: column;
@@ -63,7 +63,7 @@
     padding: 20px;
     width: 90%;
     color: rgb(13, 7, 38);
-    font-family: 'NeoDunggeunmo';
+    font-family: 'Galmuri9';
     background-color: white;
     border: 0;
     box-shadow: 0 0 15px pink;

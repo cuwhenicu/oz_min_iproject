@@ -4,6 +4,9 @@ import questionData from "../data/questionData";
 import "../css/Test.css";
 import ProgressBar from "@ramonak/react-progress-bar";
 
+import { collection, addDoc } from "firebase/firestore"; 
+import {db} from "../fbase"
+
 
 //useState로 초기값 설정
 const Test = () => {
@@ -40,8 +43,14 @@ const Test = () => {
       );
     console.log(resultMbti);
 
+    const docRef = addDoc(collection(db, "mbti"), {
+      result: resultMbti
+    });
+
+
     //문항이 끝날 때 결과로 넘어가는 함수
     navigate(`/result/${resultMbti}`)
+  
     }
   };
 
