@@ -50,14 +50,21 @@ const Test = () => {
   // 문항 수와 배열 길이를 나눠 퍼센트 계산, math.floor 함수로 나머지 값 버림.
   return (
     <div className="test-container">
-      <ProgressBar 
+      
+      <ProgressBar className="progressBar"
       completed={(Math.floor(questionNumb/questionData.length*100))}
       maxCompleted={100}
-      width="500px" 
+      bgColor = "#C8FAC8"
+      labelColor = "rgb(13, 7, 38)"
       />
 
       <div className="test-sub-cont">
-     <h2>{questionData[questionNumb].title}</h2>
+        <div>{questionData[questionNumb].title}</div>
+      <div>{questionData[questionNumb].subtitle}</div>
+      <div>{questionData[questionNumb].subt2}</div>
+      <div>{questionData[questionNumb].subt3}</div>
+      </div>
+
       <div className="test-selectBtns">
         <button onClick={() => selectBtn(1, questionData[questionNumb].type)}
         className="test-selectBtn">
@@ -67,8 +74,8 @@ const Test = () => {
         className="test-selectBtn">
           {questionData[questionNumb].answerb}
         </button>
-        </div>
       </div>
+
     </div>
   );
 };

@@ -13,12 +13,13 @@
 
 
 .resultContainer{
-    background-image: url("../../public/img/background.jpg");
+    background-image: url("../../public/img/resultbackground.jpg");
     background-size: cover;
     background-position: center;
-    /* width: 500px; */
-    height: 100%;  
     background-repeat: no-repeat;
+    height: 100%;  
+    /* width: 500px; */
+
 
     color: white;
     text-align: center;
@@ -30,28 +31,36 @@
     
 }
 
-.resultTitle{
-    font-size: 2rem;
-    font-family: 'dalmoori';
+.resultTitles{
     height: 20%;
     display: flex;
+    flex-direction: column;
+    /* padding: 0 5px; */
+    margin: 5px;
     align-items: center;
-    line-height: 130%;
-    padding: 0 5px;
+    justify-content: space-evenly;
+
+    font-size: 2rem;
+    font-family: 'dalmoori';
+    text-shadow: -1px 0 pink, 0 1px pink, 1px 0 pink, 0 -1px pink;
+}
+
+.resultTitle{
+
+    /* line-height: 130%; */
 }
 
 .resultImgBox{
     background-color: pink;
     box-shadow: 0 0 25px white;
     height: 30%;
-    /* width: ; */
     border-radius:50% ;
     overflow: hidden;
-    margin: 0 auto;
 }
 
 .resultImg{
     height: 100%;
+
     border-radius:50% ;
     overflow: hidden;
     vertical-align: middle;
@@ -87,22 +96,30 @@
     width: 40%;
     font-family: 'NeoDunggeunmo';
     font-size: medium;
-    color: blue;
+    color: rgb(13, 7, 38);
     background-color: white;
     border: 0;
-    box-shadow: 0 0 15px white;
+    box-shadow: 0 0 10px pink;
+    border: 1px solid pink;
     border-radius: 7px;
-    margin: 5px 5px;
+    margin: 7px 5px;
     padding: 10px;
     cursor: pointer;
     font-size: 90%;
 }
 
 .resultButton:hover{
-    background-color: blue;
-    color: white;
+    background-color: 	#C8FAC8	;
+    border: 1px solid #C8FAC8;
+    box-shadow: 0 0 15px #C8FAC8	;
 }
 
-
+.facebookButton {
+    width: 48px;
+    height: 48px;
+    margin-top: 2px;
+    border-radius: 24px;
+  }
+  
 
 
