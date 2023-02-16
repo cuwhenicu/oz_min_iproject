@@ -5,12 +5,12 @@
     src: url('../Galmuri9.ttf') format('truetype');
 }
 
-.miniContainer{
+/* .miniContainer{ */
     /* display: grid;
     grid-template-rows: repeat(4,300px);
     grid-template-columns: repeat(4,300px); */
 
-}
+/* } */
 
 .miniItems{
     width: 100vw;
