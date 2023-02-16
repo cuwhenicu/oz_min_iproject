@@ -133,10 +133,10 @@ const Result = () => {
       <Mbti data={mbtiData[mbti]}/>
       <div className="resultButtonContainer"> 
         <div className="resultButtons">
-          <button className="resultButton" onClick={goMbtis}>나와 맞는 유형 보기</button>
+          <button className="resultButton" onClick={goMbtis}>전체 유형 보기</button>
 
           <ModalBtn className="resultButton" onClick={openModalHandler}>
-            {isOpen ? "Opened!" : "공유하기"}
+            {isOpen ? "Opened!" : "🔗 공유하기"}
           </ModalBtn>
           {isOpen ? ( // 모달 배경화면을 누르면 setIsOpen(!isOpen)가 된다.
             <ModalBackdrop onClick={openModalHandler}>
@@ -147,10 +147,10 @@ const Result = () => {
                       <KakaoIcon src={kakaoLogo}></KakaoIcon>
                     </KakaoShareButton>
                     <FacebookShareButton url={currentUrl}>
-                      <FacebookIcon class="facebookButton"></FacebookIcon>
+                      <FacebookIcon className="facebookButton"></FacebookIcon>
                     </FacebookShareButton>
                     <CopyToClipboard text={currentUrl}>
-                      <URLShareButton class="urlButton">URL</URLShareButton>
+                      <URLShareButton className="urlButton">URL</URLShareButton>
                     </CopyToClipboard>
                   </GridContainer>
               </ModalView>
@@ -165,13 +165,16 @@ const Result = () => {
           >
             <button className="resultButton">개발팀 소개</button>
           </a>
-          <a href="https://ozcodingschool.com/" target='_blank'>
+          <a 
+            href="javascript:setTimeout(()=>{window.location = 'https://ozcodingschool.com/' },5000);" 
+            // target='_blank'
+          >
             <button className="resultButton">개발 배우러 가기</button>
           </a>
         </div>
 
         <div className="resultButtons">
-          <button className = "retryButton" onClick={goIntro}>다시하기</button>
+          <button className = "retryButton" onClick={goIntro}>↺ 다시하기</button>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;   
-    width: 500px;
+    width: 100%;
 
 
     color: white;
@@ -110,7 +110,7 @@
     color: rgb(13, 7, 38);
     background-color: white;
     border: 0;
-    box-shadow: 0 0 10px pink;
+    box-shadow: 0 0 10px lightpink;
     border: 1px solid pink;
     border-radius: 7px;
     margin: 7px 5px;

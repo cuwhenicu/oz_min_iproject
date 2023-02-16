@@ -1,26 +1,31 @@
-import {useParams, useNavigate} from "react-router-dom";
-import React from "react";
-import "../css/Mbtis.css";
+import React, { useEffect } from "react";
 
-import Mbti from "../components/Mbti";
+
 import mbtiData from '../../src/data/mbti.json';
+import MiniMbti from "../components/MiniMbti";
 
 const Mbtis = () => {
-    const params = useParams();
-    const { mbti } = params;
-
-    const navigate = useNavigate();
-
-    function goMbtis(){
-      navigate('/mbtis')
-    }
-
+const mbtis = Object.keys(mbtiData);
 
     return(
         <div>
-            <div><Mbti data={mbtiData[mbti]}/></div>
-            <div>mbti 제목</div>
-            <div>mbti 이미지</div>
+          {mbtis.map((mbti) => <MiniMbti data={mbtiData[mbti]} />)} 
+               {/* <MiniMbti data={mbtiData.enfj} />
+                <MiniMbti data={mbtiData.infj} />
+                <MiniMbti data={mbtiData.enfp} />
+                <MiniMbti data={mbtiData.infp} />
+                <MiniMbti data={mbtiData.entj} />
+                <MiniMbti data={mbtiData.intj} />
+                <MiniMbti data={mbtiData.entp} />
+                <MiniMbti data={mbtiData.intp} />
+                <MiniMbti data={mbtiData.esfj} />
+                <MiniMbti data={mbtiData.isfj} />
+                <MiniMbti data={mbtiData.estj} />
+                <MiniMbti data={mbtiData.istj} />
+                <MiniMbti data={mbtiData.estp} />
+                <MiniMbti data={mbtiData.istp} />
+                <MiniMbti data={mbtiData.esfp} />
+                <MiniMbti data={mbtiData.isfp} />  */}
         </div>
     )
 }

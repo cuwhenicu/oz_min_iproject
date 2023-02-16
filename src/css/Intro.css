@@ -7,6 +7,18 @@
 }
 
 
+@media (min-width: 800px) {
+  .introContainer {background-image: url(../../public/img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2000px;
+    height: 100%;}
+
+}
+
+
+
 /*배경이미지*/
 .introContainer {
   background-image: url(../../public/img/background.jpg);
