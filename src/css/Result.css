@@ -8,6 +8,10 @@
 
 /* 모바일 화면 */
 @media (max-width: 768px) {
+    .resultImgBox{
+        height: 220px;  
+    }
+
     .resultInfo{
         font-size : 15px;
         width: 350px;
@@ -16,11 +20,13 @@
 
     .resultButtonContainer{
         width: 350px;
+        font-size: 10px;
     }
 
     .resultButton{
         width: 163px;
     }
+
 }
 
 /* 웹페이지 화면 */
@@ -32,6 +38,10 @@
         background-repeat: no-repeat;
         height: 100%;   
         width: 100%;
+    }
+
+    .resultImgBox{
+        height: 250px;  
     }
 
     .resultInfo{
@@ -75,7 +85,7 @@
 .resultImgBox{
     background-color: pink;
     box-shadow: 0 0 25px white;
-    height: 30%;
+    /* height: 30%; */
     border-radius:50% ;
     overflow: hidden;
 }
