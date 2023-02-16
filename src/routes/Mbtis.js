@@ -8,7 +8,7 @@ const Mbtis = () => {
 const mbtis = Object.keys(mbtiData);
 
     return(
-        <div>
+        <div className='miniContainer'>
           {mbtis.map((mbti) => <MiniMbti data={mbtiData[mbti]} />)} 
                {/* <MiniMbti data={mbtiData.enfj} />
                 <MiniMbti data={mbtiData.infj} />

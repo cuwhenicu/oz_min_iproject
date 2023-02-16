@@ -13,11 +13,12 @@ import kakaoLogo from "../../src/kakao.png";
 //ModalBackdrop: 모달 실행시 BGImage
 const ModalBackdrop = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
-  width: 500px;
+  width: 100vw;
   height: 100vh;
   /*스크롤이 되도 모달창이 고정 되도록 position:fixed*/
   position: fixed;
   bottom: 0;
+  left: 0;
   /* 자식 컴포넌트인 모달창을 가운데 오게 하기 위해 flex설정*/
   display: flex;
   justify-content: center;
@@ -36,10 +37,11 @@ export const ModalView = styled.div.attrs((props) => ({
   align-items: center;
   position: fixed;
   position: absolute;
-  width: 40%;
-  height: 10%;
+  width: 180px;
+  height: 60px;
   border-radius: 1rem;
   background-color: white;
+  padding: 15px;
   }
 `;
 
@@ -166,7 +168,7 @@ const Result = () => {
             <button className="resultButton">개발팀 소개</button>
           </a>
           <a 
-            href="javascript:setTimeout(()=>{window.location = 'https://ozcodingschool.com/' },5000);" 
+            href="javascript:setTimeout(()=>{window.location = 'https://ozcodingschool.com/' },3000);" 
             // target='_blank'
           >
             <button className="resultButton">개발 배우러 가기</button>

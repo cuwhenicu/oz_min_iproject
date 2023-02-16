@@ -25,24 +25,11 @@ const Intro = () => {
       {       users:  total+1,     });   
     }
 
-  /*const [count, setCount] = useState(
-    () => JSON.parse(window.localStorage.getItem("count")) || 0
-  );
-
-  const clickEvent = () => {
-    setCount(count+1);
-  }*/
-
   const navigate = useNavigate();
   function goTest(){
     user_count();
     navigate('/test')
   }
-
- /* useEffect(() => {
-      window.localStorage.setItem("count", JSON.stringify(count));
-    }, [count]);*/
-
 
   return (
       <div className="introContainer">

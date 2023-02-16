@@ -6,15 +6,51 @@
     src: url('../Galmuri9.ttf') format('truetype');
 }
 
+/* 모바일 화면 */
+@media (max-width: 768px) {
+    .progressBar{
+        width: 300px;
+    }
+
+    .test-sub-cont{
+        width: 300px;
+        font-size: 25px;
+    }
+
+    .test-selectBtns {
+        width: 300px;
+        font-size: 20px;
+    }
+}
+
+
+/* 웹페이지 화면 */
+@media (min-width: 769px) {
+    .test-container {
+        background-image: url(../../public/img/background.jpg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+    }   
+
+    .progressBar{
+        width: 400px;
+    }
+
+    .test-sub-cont{
+        width: 400px;
+        font-size: 30px;
+    }
+
+    .test-selectBtns {
+        width: 400px;
+    }
+}
+
 /*배경이미지*/
 .test-container {
-    background-image: url(../../public/img/background.jpg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 500px;
-
     text-align: center;
     align-items: center;
     display: flex;
@@ -24,8 +60,6 @@
 
 .progressBar{
     height: 20%;
-    width: 70%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,12 +68,9 @@
 
 .test-sub-cont{
     height: 40%;
-    width: 90%;
 
-    font-size: 2rem;
     font-family: 'Galmuri9';
     color: pink;
-    
 
     display: flex;
     flex-direction: column;
@@ -51,7 +82,6 @@
 
 .test-selectBtns {
     height: 40%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

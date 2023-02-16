@@ -1,3 +1,4 @@
+/* 폰트 */
 @import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
 
 @font-face {
@@ -5,30 +6,63 @@
     src: url('../Galmuri9.ttf') format('truetype');
 }
 
+/* 모바일 화면 */
+@media (max-width: 768px) {
+    .resultInfo{
+        font-size : 15px;
+        width: 350px;
+        
+    }
+
+    .resultButtonContainer{
+        width: 350px;
+    }
+
+    .resultButton{
+        width: 163px;
+    }
+}
+
+/* 웹페이지 화면 */
+@media (min-width: 769px) {
+    .resultContainer{
+        background-image: url("../../public/img/resultbackground.jpg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;   
+        width: 100%;
+    }
+
+    .resultInfo{
+        font-size: 15px;
+        width: 400px;
+    }
+
+    .resultButtonContainer{
+        width: 400px;
+        font-size: 13px;
+    }
+
+    .resultButton{
+        width: 190px;
+    }
+}
+
+
 .resultContainer{
-    background-image: url("../../public/img/resultbackground.jpg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;   
-    width: 100%;
-
-
     color: white;
     text-align: center;
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
-    
 }
 
 .resultTitles{
     height: 15%;
     display: flex;
     flex-direction: column;
-    /* padding: 0 5px; */
     margin: 5px;
     align-items: center;
     justify-content: space-evenly;
@@ -55,9 +89,8 @@
 }
 
 .resultInfo{
-    height: 30%;
+    height: 35%;
     white-space: pre-wrap;
-    font-size: 15px;
     font-family: 'galmuri9';
 
     font-weight: lighter;
@@ -68,7 +101,6 @@
 }
 
 .resultButtonContainer{
-    width: 100%;
     height: 20%;
     display: flex;
     flex-direction: column;
@@ -79,19 +111,21 @@
 .resultButtons{
     width: 100%;
     margin: 0px 10px;
+
+    display: flex;
+    justify-content: space-evenly
+    ;
 }
 
 .resultButton{
-    width: 45%;
     font-family: 'galmuri9';
-    font-size: medium;
     color: rgb(13, 7, 38);
     background-color: white;
     border: 0;
     box-shadow: 0 0 10px pink;
     border: 1px solid pink;
     border-radius: 7px;
-    margin: 7px 5px;
+    margin: 5px;
     padding: 10px;
     cursor: pointer;
     font-size: 95%;
@@ -104,9 +138,8 @@
 }
 
 .retryButton{
-    width: 45%;
+    width: 400px;
     font-family: 'galmuri9';
-    font-size: medium;
     color: rgb(13, 7, 38);
     background-color: white;
     border: 0;
