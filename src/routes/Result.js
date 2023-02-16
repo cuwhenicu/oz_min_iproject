@@ -130,6 +130,29 @@ const Result = () => {
   const currentUrl = window.location.href;
 
 
+  // 돈꽃 내리기
+const body = document.querySelector("body");
+
+const MIN_DURATION = 10;
+
+function makeMoneySnow(){
+    const moneysnow = document.createElement("p");
+    const delay = Math.random() *10;
+    // const initialOpacity = Math.random();
+    const duration = Math.random() * 15 + MIN_DURATION;
+
+    moneysnow.innerHTML = "💸"
+    moneysnow.classList.add("moneysnow");
+    moneysnow.style.left = `${Math.random() * window.screen.width}px`;
+    moneysnow.style.top = `${Math.random() * window.screen.height - 200}px`;
+    moneysnow.style.animationDelay = `${delay}s`;
+    // moneysnow.style.opacity = initialOpacity;
+    moneysnow.style.animation = `fall ${duration}s linear`;
+
+    body.appendChild(moneysnow);
+}
+
+
   return (
     <div className="resultContainer">
       <Mbti data={mbtiData[mbti]}/>
@@ -171,7 +194,11 @@ const Result = () => {
             href="javascript:setTimeout(()=>{window.location = 'https://ozcodingschool.com/' },3000);" 
             // target='_blank'
           >
-            <button className="resultButton">개발 배우러 가기</button>
+            <button onClick={()=>{
+              for (let index=0; index <150; index++){
+                makeMoneySnow();
+            }
+              }} className="resultButton">개발 배우러 가기</button>
           </a>
         </div>
 
