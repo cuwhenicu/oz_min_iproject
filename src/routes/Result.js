@@ -46,20 +46,6 @@ export const ModalView = styled.div.attrs((props) => ({
   }
 `;
 
-// //.env
-// const REACT_APP_KAKAO_KEY = process.env.REACT_APP_KAKAO_KEY;
-
-// //kakao share버튼
-// const KakaoShareButton = styled.a`
-//   cursor: pointer;
-// `;
-
-// const KakaoIcon = styled.img`
-//   width: 48px;
-//   height: 48px;
-//   border-radius: 24px;
-// `;
-
 // 버튼을 배치시키는 컨테이너
 const GridContainer = styled.div`
   display: grid;
@@ -109,27 +95,8 @@ const Result = () => {
   // kakao SDK import하기
   const status = useScript("https://developers.kakao.com/sdk/js/kakao.js");
 
-  // kakao sdk 초기화하기
-  // status가 변경될 때마다 실행되며, status가 ready일 때 초기화를 시도합니다.
-  // useEffect(() => {
-  //   if (status === "ready" && window.Kakao) {
-  //     // 중복 initialization 방지
-  //     if (!window.Kakao.isInitialized()) {
-  //       // 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
-  //       window.Kakao.init(REACT_APP_KAKAO_KEY);
-  //     }
-  //   }
-  // }, [status]);
-
-  // const handleKakaoButton = () => {
-  //   window.Kakao.Link.sendScrap({
-  //     requestUrl: currentUrl,
-  //   });
-  // };
-
   //window 객체에서 현재 url 가져오기
   const currentUrl = window.location.href;
-
 
   // 돈꽃 내리기
 const body = document.querySelector("body");

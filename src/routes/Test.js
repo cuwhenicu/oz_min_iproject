@@ -4,9 +4,6 @@ import questionData from "../data/questionData";
 import "../css/Test.css";
 import ProgressBar from "@ramonak/react-progress-bar";
 
-import { collection, addDoc } from "firebase/firestore"; 
-import {db} from "../fbase"
-
 
 //useState로 초기값 설정
 const Test = () => {
@@ -41,12 +38,8 @@ const Test = () => {
             : current.id.substring(1, 2)),
         ""
       );
+    // 값이 잘 찍히는지 확인
     console.log(resultMbti);
-
-    const docRef = addDoc(collection(db, "mbti"), {
-      result: resultMbti
-    });
-
 
     //문항이 끝날 때 결과로 넘어가는 함수
     navigate(`/result/${resultMbti}`)
@@ -54,9 +47,9 @@ const Test = () => {
     }
   };
 
-
   //프로그레스바(라이브러리 인스톨)
   // 문항 수와 배열 길이를 나눠 퍼센트 계산, math.floor 함수로 나머지 값 버림.
+  // 제목과 문항 버튼: 배열에서 인덱스를 가져오는 식.
   return (
     <div className="test-container">
       
@@ -71,7 +64,6 @@ const Test = () => {
         <div>{questionData[questionNumb].title}</div>
       <div>{questionData[questionNumb].subtitle}</div>
       <div>{questionData[questionNumb].subt2}</div>
-      <div>{questionData[questionNumb].subt3}</div>
       </div>
 
       <div className="test-selectBtns">

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-
 import KakaoShareButton from "./Kakao";
 
+//kakao SDK
 const KakaoShareBtn = () => {
   const [shareButton, setShareButton] = useState(false);
 

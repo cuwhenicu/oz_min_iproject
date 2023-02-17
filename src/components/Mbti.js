@@ -1,5 +1,3 @@
-// import '../css/Result.css'
-
 
 const Mbti = ({data}) => {
 
