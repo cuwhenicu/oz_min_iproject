@@ -33,7 +33,7 @@ const Intro = () => {
 
   return (
       <div className="introContainer">
-        <div className="introTitle">나는<br></br>어떤 개발자가<br></br> 될 상인가?</div>
+        <div className="introTitle">🤑 나는<br></br>어떤 개발자가<br></br> 될 상인가?</div>
         <div className="introImgBox">
           <Img className="introImg"/>
         </div>

@@ -8,7 +8,8 @@ import styled from "styled-components";
 import { FacebookShareButton, FacebookIcon } from "react-share";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useScript } from "../hooks";
-import kakaoLogo from "../../src/kakao.png";
+// import kakaoLogo from "../../src/kakao.png";
+import KakaoShareBtn from "../components/KakaoShareBtn";
 
 //ModalBackdrop: 모달 실행시 BGImage
 const ModalBackdrop = styled.div`
@@ -45,19 +46,19 @@ export const ModalView = styled.div.attrs((props) => ({
   }
 `;
 
-//.env
-const REACT_APP_KAKAO_KEY = process.env.REACT_APP_KAKAO_KEY;
+// //.env
+// const REACT_APP_KAKAO_KEY = process.env.REACT_APP_KAKAO_KEY;
 
-//kakao share버튼
-const KakaoShareButton = styled.a`
-  cursor: pointer;
-`;
+// //kakao share버튼
+// const KakaoShareButton = styled.a`
+//   cursor: pointer;
+// `;
 
-const KakaoIcon = styled.img`
-  width: 48px;
-  height: 48px;
-  border-radius: 24px;
-`;
+// const KakaoIcon = styled.img`
+//   width: 48px;
+//   height: 48px;
+//   border-radius: 24px;
+// `;
 
 // 버튼을 배치시키는 컨테이너
 const GridContainer = styled.div`
@@ -110,21 +111,21 @@ const Result = () => {
 
   // kakao sdk 초기화하기
   // status가 변경될 때마다 실행되며, status가 ready일 때 초기화를 시도합니다.
-  useEffect(() => {
-    if (status === "ready" && window.Kakao) {
-      // 중복 initialization 방지
-      if (!window.Kakao.isInitialized()) {
-        // 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
-        window.Kakao.init(REACT_APP_KAKAO_KEY);
-      }
-    }
-  }, [status]);
+  // useEffect(() => {
+  //   if (status === "ready" && window.Kakao) {
+  //     // 중복 initialization 방지
+  //     if (!window.Kakao.isInitialized()) {
+  //       // 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
+  //       window.Kakao.init(REACT_APP_KAKAO_KEY);
+  //     }
+  //   }
+  // }, [status]);
 
-  const handleKakaoButton = () => {
-    window.Kakao.Link.sendScrap({
-      requestUrl: currentUrl,
-    });
-  };
+  // const handleKakaoButton = () => {
+  //   window.Kakao.Link.sendScrap({
+  //     requestUrl: currentUrl,
+  //   });
+  // };
 
   //window 객체에서 현재 url 가져오기
   const currentUrl = window.location.href;
@@ -158,7 +159,7 @@ function makeMoneySnow(){
       <Mbti data={mbtiData[mbti]}/>
       <div className="resultButtonContainer"> 
         <div className="resultButtons">
-          <button className="resultButton" onClick={goMbtis}>전체 유형 보기</button>
+          <button className="resultButton" onClick={goMbtis}>🧐 전체 유형 보기</button>
 
           <ModalBtn className="resultButton" onClick={openModalHandler}>
             {isOpen ? "Opened!" : "🔗 공유하기"}
@@ -168,9 +169,7 @@ function makeMoneySnow(){
               <ModalView>
                   <h1>공유하기</h1>
                   <GridContainer>
-                    <KakaoShareButton onClick={handleKakaoButton}>
-                      <KakaoIcon src={kakaoLogo}></KakaoIcon>
-                    </KakaoShareButton>
+                    <KakaoShareBtn />
                     <FacebookShareButton url={currentUrl}>
                       <FacebookIcon className="facebookButton"></FacebookIcon>
                     </FacebookShareButton>
@@ -188,7 +187,7 @@ function makeMoneySnow(){
             href="https://faint-bar-25e.notion.site/Team-a1d6b19d09904d40a01fc2a4a49206fa"
             target="_blank"
           >
-            <button className="resultButton">개발팀 소개</button>
+            <button className="resultButton">개발팀 소개 👨‍👩‍👧‍👧</button>
           </a>
           <a 
             href="javascript:setTimeout(()=>{window.location = 'https://ozcodingschool.com/' },3000);" 
@@ -198,7 +197,7 @@ function makeMoneySnow(){
               for (let index=0; index <150; index++){
                 makeMoneySnow();
             }
-              }} className="resultButton">개발 배우러 가기</button>
+              }} className="resultButton">💵 개발로 돈 버는 방법 💵</button>
           </a>
         </div>
 
