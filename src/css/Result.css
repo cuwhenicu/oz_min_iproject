@@ -146,8 +146,8 @@
     box-shadow: 0 0 15px #C8FAC8	;
 }
 
-.retryButton{
-    width: 400px;
+.specialButton{
+    width: 390px;
     font-family: 'galmuri9';
     color: rgb(13, 7, 38);
     background-color: white;
@@ -161,7 +161,7 @@
     font-size: 95%;
 }
 
-.retryButton:hover{
+.specialButton:hover{
     background-color:pink	;
     border: 1px solid pink;
     box-shadow: 0 0 15px pink;

@@ -156,21 +156,17 @@ function makeMoneySnow(){
           >
             <button className="resultButton">개발팀 소개 👨‍👩‍👧‍👧</button>
           </a>
-          <a 
-            href="javascript:setTimeout(()=>{window.location = 'https://ozcodingschool.com/' },3000);" 
-            // target='_blank'
-          >
-            <button onClick={()=>{
-              for (let index=0; index <150; index++){
-                makeMoneySnow();
-            }
-              }} className="resultButton">💵 개발로 돈 버는 방법 💵</button>
-          </a>
+          <button className = "resultButton" onClick={goIntro}>↺ 다시하기</button>
         </div>
 
-        <div className="resultButtons">
-          <button className = "retryButton" onClick={goIntro}>↺ 다시하기</button>
-        </div>
+        <a 
+        href="javascript:setTimeout(()=>{window.location = 'https://ozcodingschool.com/' },3000);" >
+          <button onClick={()=>{
+            for (let index=0; index <150; index++){
+              makeMoneySnow();
+            }
+          }} className="specialButton">💵 개발로 돈 버는 방법 💵</button>
+        </a>
       </div>
     </div>
   );
